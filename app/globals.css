@@ -18,30 +18,16 @@
   --font-body: var(--font-nunito);
 } 
 
-h1 {
-  font-family: var(--font-heading);
-}
 
-h2, h3 {
-  font-family: var(--font-subheading);
-}
-
-body{
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--font-body);
-}
-
-/* 
 @theme {
   /* colours */
-  /* --color-background: #fdfaf3;
+  --color-background: #fdfaf3;
   --color-surface: #faeeda;
   --color-primary: #ba7517;
   --color-accent: #fac775;
   --color-hover: #854f0b;
-  --color-text: #412402; */
-/* }  */
+  --color-text: #412402;
+} 
 
 /* Dark mode*/
 .dark {
@@ -59,16 +45,32 @@ body{
   --font-body: var(--font-changa);
 }
 
-.dark h1 {
-  font-family: var(--font-heading);
-}
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-nunito);
+  }
 
-.dark h2, h3 {
-  font-family: var(--font-subheading);
-}
+  h1 {
+    font-family: var(--font-coiny);
+  }
 
-.dark body{
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--font-body);
+  h2,
+  h3 {
+    font-family: var(--font-dangrek);
+  }
+
+  .dark body {
+    font-family: var(--font-changa);
+  }
+
+  .dark h1 {
+    font-family: var(--font-audiowide);
+  }
+
+  .dark h2,
+  .dark h3 {
+    font-family: var(--font-anta);
+  }
 }
