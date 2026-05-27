@@ -1,15 +1,46 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+//import { Geist, Geist_Mono } from "next/font/google";
+import {Coiny, Dangrek, Nunito, Audiowide, Anta, Changa} from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
+
+const coiny = Coiny({ 
+  weight: "400",
+  subsets: ["latin"], 
+  variable: "--font-coiny" 
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const dangrek = Dangrek({ 
+  weight: "400",
+  subsets: ["latin"], 
+  variable: "--font-dangrek" 
+});
+const nunito = Nunito({ 
+  subsets: ["latin"], 
+  variable: "--font-nunito" 
+});
+const audiowide = Audiowide({ 
+  weight: "400",
+  subsets: ["latin"], 
+  variable: "--font-audiowide" 
+});
+const anta = Anta({ 
+  weight: "400",
+  subsets: ["latin"], 
+  variable: "--font-anta" 
+});
+const changa = Changa({ 
+  subsets: ["latin"], 
+  variable: "--font-changa" 
 });
 
 export const metadata: Metadata = {
@@ -23,11 +54,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
+    
+      <html lang="en" suppressHydrationWarning>
+          <body className={`${coiny.variable} ${dangrek.variable} ${nunito.variable} ${audiowide.variable} ${anta.variable} ${changa.variable} h-full antialiased`}>
+            <ThemeProvider attribute="class" defaultTheme="light">
+              <div>
+                {children}
+              </div>
+            </ThemeProvider>
+          </body>
+        
+      </html>
+    
   );
 }
