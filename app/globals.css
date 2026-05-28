@@ -4,13 +4,14 @@
 
 /* Light Mode */
 :root {
+  /* [HONEY] */
   /* colours */
-  --color-background: #fdfaf3;
+  /* --color-background: #fdfaf3;
   --color-surface: #faeeda;
   --color-primary: #ba7517;
   --color-accent: #fac775;
   --color-hover: #854f0b;
-  --color-text: #412402;
+  --color-text: #412402; */
 
   /* fonts */
   --font-heading: var(--font-coiny);
@@ -18,15 +19,23 @@
   --font-body: var(--font-nunito);
 } 
 
-
+/* [COLOURS} */
 @theme {
-  /* colours */
+  /* [HONEY] */
   --color-background: #fdfaf3;
   --color-surface: #faeeda;
   --color-primary: #ba7517;
   --color-accent: #fac775;
   --color-hover: #854f0b;
   --color-text: #412402;
+
+  /* [MIDNIGHT] */
+  /* --color-background: #0e0b1a;
+  --color-surface: #26215c;
+  --color-primary: #534ab7;
+  --color-accent: #afa9ec;
+  --color-hover: #cecbf6;
+  --color-text: #eeedfe; */
 } 
 
 /* Dark mode*/
