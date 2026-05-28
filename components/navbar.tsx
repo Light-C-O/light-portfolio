@@ -10,30 +10,31 @@ export default function NavBar(){
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="absolute flex justify-between w-full items-center top-10 px-8 z-50">
+        <nav className="absolute flex justify-between w-full items-center top-5 px-8 z-50">
             {/* Logo */}
-            <h3>
-                <span className="text-primary underline underline-offset-2">L</span>.<span className="text-primary underline underline-offset-2">C</span>.<span className="text-primary underline underline-offset-2">O</span>
+            <h3 className="text-xl md:text-3xl">
+                <span className="text-primary underline underline-offset-2">L</span> . <span className="text-primary underline underline-offset-2">C</span> . <span className="text-primary underline underline-offset-2">O</span>
             </h3>
 
             {/* Desktop mode */}
-            <div className="hidden sm:flex gap-8 uppercase text-text">
+            <div className="hidden sm:flex gap-8 uppercase text-text items-center">
                 <Link href="/">Home</Link>
                 <Link href="/works">Works</Link>
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
+                {/* <ModeButton/> */}
             </div>
 
             {/* Mode toggle */}
             <div className="text-text"><ModeButton/></div>
 
             {/* Mobile mode - Hamburger menu */}
-            <div className="sm:hidden">
+            <div className="flex sm:hidden items-center gap-4">
                 <button onClick={()=>setMenuOpen(!menuOpen)}>
                     <Menu/>
                 </button>
                 {menuOpen && (
-                    <div className="flex flex-col text-center rounded-md absolute right-8 top-16 border-accent bg-surface uppercase z-50">
+                    <div className="flex flex-col text-center rounded-md absolute right-8 top-8 border-accent bg-surface uppercase z-50">
                         <Link className="p-2" href="/home" onClick={()=>setMenuOpen(false)}>Home</Link>
                         <Link className="p-2" href="/works" onClick={()=>setMenuOpen(false)}>Works</Link>
                         <Link className="p-2" href="/about" onClick={()=>setMenuOpen(false)}>About</Link>

@@ -12,7 +12,7 @@ export default function Menu() {
         <img
             src={!mounted ? "/hamburger_light.svg" : theme === "dark" ? "/hamburger_dark.svg" : "/hamburger_light.svg"}
             alt="main background image"
-            className="w-10 h-10"
+            className="w-10 h-10 cursor-pointer"
         />
     )
 }
